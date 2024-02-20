@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('https://i.postimg.cc/rp0k3Cns/Luis-Sarahi.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    width: 190px;
+    height: 35px;
+    color: white;
+    font-size: 31px;
+    font-family: 'Calligraphy', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .custom-button {
+    height: 20px;
+    background: rgba(217, 217, 217, 0.38);
+    opacity: 1;
+    position: absolute;
+    top: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px; /* Adjust padding based on your design */
+    white-space: nowrap;
+  }
+
+  #CASAMOS {
+    left: 5%;
+  }
+  
+  #INFORMACIÓN {
+    left: 22%;
+  }
+  
+  #VIAJEYESTANCIA {
+    left: 45%;
+  }
+  
+  #NOSOTROS {
+    left: 65%;
+  }
+  
+  #REGALOS {
+    left: 85%;
+  }
+
+  @media (max-width: 600px) {
+    .custom-button {
+      width: 100%; /* Make buttons full width on smaller screens */
+      left: 0; /* Reset left position */
+      padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    #CASAMOS,
+    #INFORMACIÓN,
+    #VIAJEYESTANCIA,
+    #NOSOTROS,
+    #REGALOS {
+      left: 0; /* Reset left position for smaller screens */
+      margin-bottom: 10px; /* Add spacing between buttons */
+    }
+  }
