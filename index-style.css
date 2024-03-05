@@ -1,0 +1,250 @@
+/* Casamos */
+
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'my-font';
+    src: url('./Fonts/Calligraphy.woff2') format('woff2'),
+         url('./Fonts/Calligraphy.woff') format('woff'),
+         url('./Fonts/Calligraphy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    font-family: 'Montaga', serif;
+    font-weight: 400;
+    color: var(--c1--2--);
+}
+
+body {
+    --c1--1--: #FFFFFF;
+    --c1--2--: #000000;
+    --c1--3--: #928C6C;
+    background-color: rgba(var(--c1-1---), 0.8);
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('https://i.postimg.cc/rp0k3Cns/Luis-Sarahi.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo {
+    width: 38px; /* The image's ideal size */
+    max-width: 100%; /* Allow shrinking if necessary */
+    margin-left: 25px;
+    margin-top: 4px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'my-font', serif;
+    font-size: clamp(60px, 10vw, 100px);
+    line-height: clamp(65px, 10vw, 105px);
+    color: var(--c1--1--);
+    padding: 2px;
+}
+
+h2 {
+    font-size: clamp(30px, 5vw, 35px);
+    line-height: clamp(35px, 5vw, 45px);
+    text-transform: capitalize;
+    color: var(--c1--1--);
+    padding: 25px;
+}
+
+h3 {
+    font-size: clamp(25px, 5vw, 35px);
+    line-height: clamp(30px, 5vw, 40px);
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: clamp(15px, 5vw, 20px);
+    line-height: clamp(20px, 5vw, 25px);
+    text-transform: capitalize;
+}
+
+h5 {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 15px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.row {
+    display: flex;
+}
+
+.flex {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(2em, 5vw, 5em);
+}
+
+.flex>* {
+    flex: 1 1 25em;
+}
+
+.column {
+    display: grid;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    background-color: rgba(161, 161, 161, 255); /* Darker gray with 70% opacity */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Add padding for breathing room */
+  }
+
+  nav ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+nav li {
+    height: 50px;
+}
+
+.nav-items {  /* New container element */
+    display: flex;
+    justify-content: space-around; /* Distribute remaining items */
+    width: 100%; /* Ensures full width */
+  }
+  
+
+nav a {
+    text-decoration: none;
+    display: block; /* Makes the whole link clickable */
+    padding: 15px;
+    color: var(--c1--2--);
+  }
+
+nav a:hover {
+    color: var(--c1--3--);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px; /* Updated from 's50px' - Adjust width if needed */
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile {
+        display: none;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.logo {
+    float: left; /* Not ideal for modern layouts */
+    margin-right: 10px;
+}
+
+li.logo { 
+    width: 150px; /* Adjust the width as needed */
+    height: auto;  
+    overflow: hidden; 
+}
+
+li.logo img {
+    max-width: 100%; 
+    height: auto;    
+}
+
+/* End NAVIGATION BAR */
+
+/* Casamos images */
+
+.confirmation-button {
+    background-color: rgba(161,161,161,255); /* Darker gray with 70% opacity */
+    color: white;              /* White text (adjust for contrast against your image) */
+    padding: 15px 30px;        /* Add some padding */
+    text-align: center;        
+    text-decoration: none;     /* Remove underline */
+    display: inline-block;     
+    font-size: 16px;           /* Adjust font size if needed */
+    cursor: pointer;           /* Change cursor to a pointer on hover */
+}
+
+
+.intro-casamos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 58vh;
+    margin-left: 25px;
+}
+
+
+.intro-casamos-h1 {
+    text-align: center;
+    position: static;
+    margin-left: 10px;
+}
+
+/* Nos Casamos */

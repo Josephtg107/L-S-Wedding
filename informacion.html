@@ -2,10 +2,191 @@
 <html lang="es-MX">
     <head>
         <meta charset="UTF-8">
-        <title>INFORMACION</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-devide-width, initial-scale=1.0">
+        <title>S&L</title>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+        <script src="js.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" type="text/css" href="informacion.css">
     </head>
     <body>
-        <p></P>INFORMACION</p>
+        <!-- Navigation -->
+        <header>
+            <nav class="navigation row">
+                <ul class="sidebar">
+                    <li><a href="index.html">¡NOS CASAMOS!</a></li>
+                    <li><a href="informacion.html">INFORMACIÓN DEL EVENTO</a></li>
+                    <li><a href="viaje.html">VIAJE Y ESTANCIA</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="regalos.html">MESA DE REGALOS</a></li>
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                </ul>
+                <ul class="row">
+                    <li><img src="https://i.postimg.cc/hjwP8gVM/weddinglogo.png" alt="" class="logo"><a href="index.html"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">¡NOS CASAMOS!</a> </li>
+                    <li class="hideOnMobile"><a href="informacion.html">INFORMACIÓN DEL EVENTO</a> </li>
+                    <li class="hideOnMobile"><a href="viaje.html">VIAJE Y ESTANCIA</a></li>
+                    <li class="hideOnMobile"><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li class="hideOnMobile"><a href="regalos.html">MESA DE REGALOS</a></li>
+                    <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- End of Navigation -->
+        
+        <!-- Timer -->
+        <section class="timer-intro">
+            <div class="launch-time">
+                <div class="time-unit">
+                    <p id="days">00</p>
+                    <span>DÍAS</span>
+                </div>
+                <div class="time-unit">
+                    <p id="hours">00</p>
+                    <span>HORAS</span>
+                </div>
+                <div class="time-unit">
+                    <p id="minutes">00</p>
+                    <span>MINUTOS</span>
+                </div>
+                <div class="time-unit">
+                    <p id="seconds">00</p>
+                    <span>SEGUNDOS</span>
+                </div>
+            </div>
+            <h2 class="timer-footer">SARAHI & LUIS</h2>
+        </section>
+        <!-- End of timer -->
+
+        <!-- Parrafo pequeño -->
+        <section class="parrafo-experiencia">
+            <div class="parrafo-experienciaH2">
+                <h4>¡Estamos felices de compartir estos momentos tan importantes en nuestra vida con la gente que más queremos!</h4>
+                <h3>Para que tengan la mejor experiencia, les dejamos toda la información que van a necesitar durante el fin de semana de nuestra boda.</h3>
+            </div>
+        </section>
+        <!-- End of Parrafo pequeño -->
+
+        <!-- Tour -->
+        <section class="tour-viernes">
+            <div class="tour">
+                <h4>Viernes 06 de Septiembre del 2024</h4>
+                <h3>Tour Privado a Tequila, Jalisco</h3>
+                <p><strong>Salida:</strong> 9:30 a.m.</p>
+                <p><strong>Regreso:</strong> 8:00 p.m.</p>
+                <p><strong>Punto único de salida y regreso:</strong>  Hard Rock Guadalajara</p>
+                <p>9:30 a.m. - Llegada de los autobuses al hotel Hard Rock Guadalajara.
+                <p>11:30 a.m. - Tour José Cuervo.</p>
+                <p>1:00 p.m. - Tiempo libre en Pueblo Tequila.</p>
+                <p>2:15 p.m. - Traslado.</p>
+                <p>2:30 p.m. - Comida La Taberna.</p>
+                <p>4:00 p.m. - Traslado.</p>
+                <p>4:15 p.m. - Cantaritos el Güero (consumo no incluido)</p>
+                <p>7:00 p.m - Regreso a Guadalajara.</p>
+                <p>8:00 p.m - Llegada al hotel Hard Rock.</p>
+            </div>
+        </section>
+        <!-- End of Tour -->
+
+        <!-- Costos tour -->
+        <section class="tour-viernes-costos">
+            <div class="tour-costos">
+              <img src="./Images/Informacion/aloevera-table-cutout flipped.png" alt="Background image" class="background-image">
+              <div class="text-content">
+                <p><strong>Costo por persona : $1,570 (IVA incluido) (dependiendo de los invitados interesados esta sujeto a cambio).</strong></p>
+                <p>El tour deberá ser pagado antes para contar con la reservación.</p>
+                <p>El tour queda reservado con el 50% para garantizarlo.</p>
+                <p>Fecha límite de reservación: 31 de Julio 2024.</p>
+                <p>Vestimenta: </p>
+                <p>DINÁMICA DE PAGO:</p>
+                <p>Paso 1: Realizar tu pago a la siguiente cuenta.</p>
+                <p>Cuenta: 0481303163</p>
+                <p>CLABE INTERBANCARIA: 012 320 00481303163</p>
+                <p>Nombre: Laura A. Villalobos Reséndiz</p>
+                <p>Dirección: Circunvalación 415 Jardines Alcalde. Guadalajara Jal.</p>
+                <p>Paso 2: Enviar tu comprobante de pago a este número de WhatsApp:</p>
+                <p>+ 52 3315370503 (únicamente WhatsApp)</p>
+                <p>Mencionar: nombre completo del titular de la reserva (código Sarahi/Luis)</p>
+                <p>Paso 3: Recibe tu confirmación de reservación.</p>
+              </div>
+            </div>
+            <div class="boton-calendario">
+              <button class="calendario">Agregar al calendario</button>
+            </div>
+          </section>
+        <!-- End of costos tour -->
+
+        <!-- Sabado 07 Sept -->
+        <section class="tour-sabado">
+            <div class="tour-sabado">
+                <h4>Sábado 07 de Septiembre del 2024</h4>
+                <div class="img-ceremonia"><img src='./Images/Informacion/PHOTO-2024-01-19-21-44-17.jpg' alt=""></div>
+                <div class="ceremonia-religiosa">
+                <h3>CEREMONIA RELIGIOSA</h3>
+                <p>Basilica de Nuestra</p>
+                <p>Señora de Zapopan</p>
+                <p>Horiario: 6:00p.m.</p>
+                <p>Dirección</p>
+            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.7272594820606!2d-103.39480192419705!3d20.72129708085219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afbaa59ff0b7%3A0x8e2a5f4fddb3ec9d!2sBas%C3%ADlica%20de%20Nuestra%20Se%C3%B1ora%20de%20Zapopan!5e0!3m2!1sen!2smx!4v1709573883966!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>Transporte desde la sede del hotel: 5:20 p.m.</p>
+            </div>
+        </section>
+        <!-- End of Sabado 07 Sept -->
+
+        <!-- Gotera -->
+        <section class="gotera-eventos">
+            <div class="gotera">
+                <p>Recepción</p>
+                <h3>La Gotera Eventos</h3>
+                <p>Dirección</p>
+            <div class="iframe-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13078.736875930572!2d-103.54037006084238!3d20.73335064888727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a804d5abc3ab%3A0xce7b9f23446dba94!2sLa%20Gotera%20Events!5e0!3m2!1sen!2smx!4v1709574173718!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+                <p>NO NIÑOS</p>
+                <p>Coctel: 8:00 p.m.</p>
+                <p>Recepción: 8:45 p.m.</p>
+            </div>
+            <div class="gotera-img">
+                <img src="./Images/Informacion/IMG_4176.jpg" alt="">
+            </div>
+        </section>
+        <!-- End of Gotera -->
+
+        <!-- Vestimenta -->
+        <section class="vestimenta">
+            <div class="codigo-vestimenta">
+                <h3>Código de Vestimenta</h3>
+                <p>Apóyanos con un código de vestimenta tipo etiqueta para nuestra ceremonia y celebración.</p>
+            </div>
+                <p>En caso de estar en el hotel sede regreso a las 2:00 a.m.</p>
+            <div class="boton-vestimenta">
+                <button class="vestimenta">Agregar al calendario</button>
+            </div>
+        </section>
+        <!-- End of Vestimenta -->
+
+        <!-- Hair Makeup -->
+        <section class="hair-makeup">
+            <div class="hair-makeup">
+                <h3>Hair and Makeup</h3>
+                <p>Recomendaciones</p>
+                <div class="img-insta-susy"><img src="https://i.postimg.cc/XNxcXp85/susy.png" alt=""></div>
+                <p>Susy Zayas Makeup</p>
+                <p>+52 664 123 3224</p>
+                <button class="instagram-susy">instagram</button>
+            </div>
+
+            <div class="hair-makeup">
+                <h3>Hair and Makeup</h3>
+                <p>Recomendaciones</p>
+                <div class="img-insta-gemelas"><img src="https://i.postimg.cc/Jn53NnC9/gemelas.png" alt=""></div>
+                <p>Gemelas Zuñiga Vega</p>
+                <p>+52 3310151271</p>
+                <button class="instagram-susy">instagram</button>
+            </div>
+
+        </section>
     </body>
 </html>   

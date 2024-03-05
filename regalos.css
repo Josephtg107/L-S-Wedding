@@ -1,0 +1,286 @@
+/* Informacion */
+
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    font-family: 'Montaga', serif;
+    font-weight: 400;
+    color: var(--c1--2--);
+}
+
+body {
+    --c1--1--: #FFFFFF;
+    --c1--2--: #000000;
+    --c1--3--: #928C6C;
+    background-color: rgba(var(--c1-1---), 0.8);
+    min-height: 100vh;
+    margin: 0;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo {
+    width: 38px; /* The image's ideal size */
+    max-width: 100%; /* Allow shrinking if necessary */
+    margin-left: 25px;
+    margin-top: 4px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(60px, 10vw, 100px);
+    line-height: clamp(65px, 10vw, 105px);
+    color: var(--c1--2--);
+    padding: 1px;
+}
+
+h2 {
+    font-size: clamp(30px, 5vw, 35px);
+    line-height: clamp(35px, 5vw, 45px);
+    text-transform: capitalize;
+    color: var(--c1--1--);
+    padding: 25px;
+}
+
+h3 {
+    font-size: clamp(25px, 5vw, 35px);
+    line-height: clamp(30px, 5vw, 40px);
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: clamp(15px, 5vw, 20px);
+    line-height: clamp(20px, 5vw, 25px);
+    text-transform: capitalize;
+}
+
+h5 {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.row {
+    display: flex;
+}
+
+.flex {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(2em, 5vw, 5em);
+}
+
+.flex>* {
+    flex: 1 1 25em;
+}
+
+.column {
+    display: grid;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Add padding for breathing room */
+  }
+
+  nav ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+nav li {
+    height: 50px;
+}
+
+.nav-items {  /* New container element */
+    display: flex;
+    justify-content: space-around; /* Distribute remaining items */
+    width: 100%; /* Ensures full width */
+  }
+  
+
+nav a {
+    text-decoration: none;
+    display: block; /* Makes the whole link clickable */
+    padding: 15px;
+    color: var(--c1--2--);
+  }
+
+nav a:hover {
+    color: var(--c1--3--);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px; /* Updated from 's50px' - Adjust width if needed */
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile {
+        display: none;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.logo {
+    float: left; /* Not ideal for modern layouts */
+    margin-right: 10px;
+}
+
+li.logo { 
+    width: 150px; /* Adjust the width as needed */
+    height: auto;  
+    overflow: hidden; 
+}
+
+li.logo img {
+    max-width: 100%; 
+    height: auto;    
+}
+
+/* End NAVIGATION BAR */
+
+/* Regalos */
+.intro-regalos {
+    display: flex;
+    background: url('./Images/Regalos/cherry-blossoms-spring-chureito-pagoda-fuji-mountain-japan.jpg'), var(--c1--1--);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 30em 0;
+    overflow: hidden;
+}
+
+.intro-regalos h1 {
+    margin-left: 25%;
+    white-space: nowrap;
+}
+
+.intro-regalos h4 {
+    font-size: bold;
+    font-family: 'Montaga', bold;
+    margin-left:25%;
+    text-align: center;
+}
+
+
+/* End of Regalos */
+
+/* Cuentas */
+
+.cuentas-div h1 {
+    font-family: 'Montaga', serif;
+    font-size: 55px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15px;
+}
+
+
+.cuentas-bancos {
+    display: flex; /* Use flexbox for easy side-by-side layout */
+    justify-content: space-around; /* Distribute items evenly with spacing */
+    align-items: center; /* Vertically center items */
+    margin: 20px auto; /* Add top/bottom margin, auto for left/right centering */
+    width: 80%; /* Adjust width as needed for responsiveness */
+  }
+
+  .cuentas-bancos div { /* Target image containers */
+    text-align: center; /* Center the text within each container */
+  }
+  
+  .cuentas-bancos img {
+    border-radius: 50%;  /* Create the circle shape */
+    width: 100px;        /* Set image width (adjust as needed) */
+    height: 100px;       /* Maintain aspect ratio */
+    object-fit: cover;   /* Ensure image fills the circle neatly */
+    margin-bottom: 10px; /* Add space between image and text */
+  }
+
+  .cuentas-bancos .efectivo {
+    margin-bottom: 40px; /* Adjust the value as needed */
+  }
+
+  .cuentas-bancos .cash-app {
+    margin-top: 120px; /* Adjust the value as needed */
+  }
+  
+
+  .cuentas-bancos .santander {
+    margin-top: 95px; /* Adjust the value as needed */
+  }
+
+  .cuentas-bancos .santander p {
+    margin-bottom: 15px; /* Increase this value for more spacing */
+  }
+
+  .cuentas-bancos img.no-circle {
+    border-radius: 0; /* Keep this to avoid the circle crop */
+    width: 150px;     /* Adjust width as desired */
+    height: auto;  
+  }

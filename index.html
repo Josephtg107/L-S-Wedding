@@ -2,17 +2,50 @@
 <html lang="es-MX">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-devide-width, initial-scale=1.0">
         <title>S&L</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+        <script src="js.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" type="text/css" href="index-style.css">
     </head>
     <body>
-        <a href="casamos.html" class="custom-button" id="CASAMOS">¡NOS CASAMOS!</a>
-        <a href="informacion.html" class="custom-button" id="INFORMACION">¡NOS CASAMOS!</a>
-        <button class="custom-button" id="VIAJEYESTANCIA">VIAJE Y ESTANCIA</button>
-        <button class="custom-button" id="NOSOTROS">SOBRE NOSOTROS</button>
-        <button class="custom-button" id="REGALOS">MESA DE REGALOS</button>
-        <div class="intro-text">Sarahi & Luis</div>
-    <p>07.SEP.24 · Guadalajara, Jalisco</p>
-    <img style= {{ width: 481, height: 358}} src="https://i.postimg.cc/bvkjSwQd/S-L.png"/>
+<!-- Navigation -->
+<header>
+    <nav class="navigation row">
+        <ul class="sidebar">
+            <li><a href="index.html">¡NOS CASAMOS!</a></li>
+            <li><a href="informacion.html">INFORMACIÓN DEL EVENTO</a></li>
+            <li><a href="viaje.html">VIAJE Y ESTANCIA</a></li>
+            <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+            <li><a href="regalos.html">MESA DE REGALOS</a></li>
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        </ul>
+        <ul class="row">
+            <div class="nav-items">
+            <li><img src="https://i.postimg.cc/hjwP8gVM/weddinglogo.png" alt="" class="logo"><a href="index.html"></a></li>
+            <li class="hideOnMobile"><a href="index.html">¡NOS CASAMOS!</a> </li>
+            <li class="hideOnMobile"><a href="informacion.html">INFORMACIÓN DEL EVENTO</a> </li>
+            <li class="hideOnMobile"><a href="viaje.html">VIAJE Y ESTANCIA</a></li>
+            <li class="hideOnMobile"><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+            <li class="hideOnMobile"><a href="regalos.html">MESA DE REGALOS</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </div>
+        </ul>
+    </nav>
+</header>
+<!-- End Navigation -->
+
+<!-- Background -->
+    <section class="intro-casamos">
+            <div class="intro-casamos-h1">
+                <h1>Sarahi & Luis</h1>
+                <h2>07.SEP.24 · Guadalajara, Jalisco</h2>
+                <a href="asistencia.html" class="confirmation-button">CONFIRMA TU ASISTENCIA</a>
+            </div>
+
+    </section>
+<!-- End of Background -->
     </body>
-</html>   
+</html>
