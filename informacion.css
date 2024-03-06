@@ -235,9 +235,9 @@ li.logo img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 20em 0;
-    overflow: hidden;
-    position: relative;
+    padding: 2em 0; /* Reduced padding */
+    position: relative;  /* Added for fine-tuning */
+
 }
 
 .timer-intro .launch-time {
@@ -432,6 +432,7 @@ li.logo img {
         font-family: 'Bodoni 72 Book Bold';
 }
 
+
 /* End of Tour */
 
 /* Costos tour */
@@ -476,7 +477,7 @@ li.logo img {
   }
 
   .text-content b {
-    font-family: 'Bodoni 72 Book Bold';
+    font-family: 'Poppins';
   }
   
   .tour-costos p {
@@ -484,6 +485,11 @@ li.logo img {
     margin-bottom: 10px;
     text-align: start;
 
+  }
+
+  .whatsapp-link a { 
+    color: blue; 
+    text-decoration: underline; 
   }
 
   .tour-costos p strong {

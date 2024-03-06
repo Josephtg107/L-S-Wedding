@@ -24,7 +24,7 @@ body {
     --c1--1--: #FFFFFF;
     --c1--2--: #000000;
     --c1--3--: #928C6C;
-    --c1--4--: linear-gradient(180deg, #928c6c, #4a4e2d);
+    --c1--4--: #4a4e2d;
     background-color: rgba(var(--c1-1---), 0.8);
     min-height: 100vh;
     margin: 0;
@@ -230,6 +230,12 @@ li.logo img {
 .intro-casamos {
     align-items: center;
     text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 58vh;
+    margin-top: 245px;
+    margin-left: 24px;
 }
 
 .confirmation-button {
@@ -243,14 +249,6 @@ li.logo img {
     cursor: pointer;           /* Change cursor to a pointer on hover */
 }
 
-
-.intro-casamos {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 58vh;
-    margin-top: 270px;
-}
 
 
 .intro-casamos-h1 {
