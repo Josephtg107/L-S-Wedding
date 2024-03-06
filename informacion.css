@@ -4,6 +4,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: 'my-font';
+    src: url('./Fonts/Calligraphy.woff2') format('woff2'),
+         url('./Fonts/Calligraphy.woff') format('woff'),
+         url('./Fonts/Calligraphy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni 72 Book'; /* Use the actual name of the font */
+    src: url('./Fonts/1574087879938-Bodoni-72-Book.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Bodoni 72 Book Bold'; /* Use the actual name of the font */
+    src: url('./Fonts/Bodoni/1574087879852-Bodoni-72-Bold.otf') format('opentype'); 
+    font-weight: bold; 
+    font-style: normal; 
+}
 
 
 *,*::after,*::before {
@@ -17,6 +39,7 @@ body {
     --c1--1--: #FFFFFF;
     --c1--2--: #000000;
     --c1--3--: #928C6C;
+    --c1--4--: #4a4e2d;
     background-color: rgba(var(--c1-1---), 0.8);
     min-height: 100vh;
     margin: 0;
@@ -25,6 +48,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -39,7 +63,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    font-family: "Dancing Script", cursive;
+    font-family: 'my-font', serif;
     font-size: clamp(60px, 10vw, 100px);
     line-height: clamp(65px, 10vw, 105px);
     color: var(--c1--2--);
@@ -57,13 +81,11 @@ h2 {
 h3 {
     font-size: clamp(25px, 5vw, 35px);
     line-height: clamp(30px, 5vw, 40px);
-    text-transform: capitalize;
 }
 
 h4 {
     font-size: clamp(15px, 5vw, 20px);
     line-height: clamp(20px, 5vw, 25px);
-    text-transform: capitalize;
 }
 
 h5 {
@@ -208,13 +230,37 @@ li.logo img {
 /* Timer */
 
 .timer-intro {
+    align-content: center;
     background: url('./Images/Informacion/mexican-agave-field-tequila-production.jpg'), var(--c1--1--);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 20em 0;
     overflow: hidden;
+    position: relative;
 }
+
+.timer-intro .launch-time {
+    display: flex; /* Use flexbox for easy arrangement */
+    align-items: center; /* Vertically center text within units */
+    justify-content: center; /* Space units out in a row */
+  }
+
+  .timer-intro .column {
+    display: flex;
+    flex-direction: column; /* Make each column vertical */
+    margin-right: 20px; /* Space between columns */
+    margin-left: 20px;
+  }
+
+  .timer-intro .time-unit {
+    margin-right: 15px; /* Add spacing between units */
+  }
+
+  .timer-intro .time-unit span {
+    font-family: 'Poppins';
+    font-size: 1.6em;  /* Adjust the size as needed */
+  }
 
 .launch-time {
     display: flex;
@@ -228,7 +274,7 @@ li.logo img {
 }
 
 .launch-time div p {
-    font-size: 100px;
+    font-size: 80px;
     margin-bottom: -14px;
 }
 
@@ -242,15 +288,16 @@ li.logo img {
 }
 
 .timer-footer { 
+    font-family: 'my-font', serif;
     padding-top: 20%; /* Adjust as needed */
     padding-bottom: 10%; /* Adjust as needed */
-    font-size: 100px;
-    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
     display: flex; 
     justify-content: center;  /* Or use space-around/space-between */  
     gap: 30px;  /* Adjust gap value as needed */
     background-position: top center; /* This will position the background image at the top center */
     background-size: cover; /* This will make sure the background image covers the container */
+    margin-top: 200px;
 }
 
 .timer-footer-container { 
@@ -258,12 +305,20 @@ li.logo img {
     justify-content: center;  
 }
 
+.time-unit p {
+    font-family: 'Poppins';
+}
+
+.time-unit span {
+    font-family: 'Bodoni 72 Book';
+}
+
 /* End of Timer */
 
 /* Parrafo Pequeño */
 .parrafo-experienciaH2 h4 {
     font-family: "Dancing Script", cursive;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0;
@@ -271,25 +326,26 @@ li.logo img {
     line-height: 2;
     margin-left: 5px;  /* Margin from the left side */
     margin-right: 5px; 
-    padding: 2px;
+    justify-content: center;
   }
 
-
   .parrafo-experienciaH2 h3 {
-    font-size: clamp(25px, 5vw, 35px);
-    line-height: clamp(30px, 5vw, 40px);
+    font-family: 'Bodoni 72 Book';
+    font-size: 20px;
+    line-height: 1.5;
     text-align: center;
-    margin-left: 20px;  /* Margin from the left side */
-    margin-right: 20px; 
-    padding: 50px;
+    margin-left: 1px;  /* Margin from the left side */
+    margin-right: 1px; 
+    padding: 20px;
+    justify-content: center;
   }
 /* End of Parrafo Pequeño */
 
 /* Tour */
 
 .tour h4 {
-    font-family: "Montaga", serif;
-    font-size: 65px;
+    font-family: 'Bodoni 72 Book';
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0;
@@ -298,48 +354,82 @@ li.logo img {
     margin-left: 5px;  /* Margin from the left side */
     margin-right: 5px; 
     padding: 2px;
+    justify-content: center;
+
   }
 
   .tour-container {
     text-align: center;
+    justify-content: center;
+
   }
 
   .tour h3 {
+    font-family: 'Bodoni 72 Book Bold';
     color: var(--c1--2--);
-    font-size: clamp(25px, 5vw, 35px);
-    line-height: clamp(30px, 5vw, 40px);
+    font-size: 15px;
 
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
 
     background-color: #928C6C; /* Example yellowish-brownish color */
     border-radius: 5px;
     padding: 10px 15px; /* Adjusted padding */
     display: block; /* Change to block for center alignment */
     margin-top: 0; /* Reset margin-top to remove extra space */
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
-.tour p { 
+.tour p {
     margin-bottom: 10px; 
     font-size: 18px;  /* Adjust the size as desired */
+    font-weight: bold;
+    font-size: 12px;
 }
 
-.tour p strong {
-    font-weight: 700;
+.tour b {
+    font-family: 'Bodoni 72 Book Bold';
 }
 
 .tour {
+    font: "Poppins";
     position: relative;
+    margin-left: 10px;
+    text-align: start;
+    justify-content: start;
 }
 
-.tour-viernes {
-    background: url('./Images/Informacion/aloevera-table-cutout.png') left 100% bottom 5%/contain no-repeat;
+
+.tour-viernes { 
+    position: relative; /* Required for pseudo-element positioning */
     padding: 1px;
     margin-bottom: 10%;
-    background-size: 30%;
+}
+
+.tour-viernes::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url('./Images/Informacion/aloevera-table-cutout.png'); 
+    background-position:  left 100% bottom 5%; /* Replicate existing positioning */
+    background-size: 260px;
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Apply opacity */
+    z-index: -1; /* Place it behind the content */
+}
+
+.text-content p {
+    text-align: center;
+    justify-content: center;
+}
+
+.text-content b {
+        font-family: 'Bodoni 72 Book Bold';
 }
 
 /* End of Tour */
@@ -347,9 +437,24 @@ li.logo img {
 /* Costos tour */
 
 .tour-viernes-costos {
-    background-color: #ffffff;
-    padding: 50px;
-  }
+    position: relative; /* Required for pseudo-element positioning */
+    padding: 1px;
+    margin-bottom: 10%;
+}
+
+.tour-viernes-costos::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url(./Images/Informacion/aloevera-table-cutout\ flipped.png);
+    opacity: 0.3; 
+    background-size: 260px;
+    background-repeat: no-repeat;
+    z-index: -1; /* Place it behind the content */
+}
   
   .tour-costos {
     display: flex;
@@ -359,19 +464,26 @@ li.logo img {
   
   .background-image {
     width: 40%;  /* Adjust width to make the image smaller */
-    height: auto;
+    height: 575px;
     object-fit: cover;
     margin-left: -50px;  /* Move the image slightly to the left */
   }
   
   .text-content {
-    width: 60%;  /* Adjust width to accommodate smaller image */
+    width: 100%;  /* Adjust width to accommodate smaller image */
     text-align: justify;
+    margin-left: 1%;
+  }
+
+  .text-content b {
+    font-family: 'Bodoni 72 Book Bold';
   }
   
   .tour-costos p {
-    font-size: 20px;
+    font-size: 12px;
     margin-bottom: 10px;
+    text-align: start;
+
   }
 
   .tour-costos p strong {
@@ -382,17 +494,18 @@ li.logo img {
   
   .boton-calendario {
     text-align: center;
-    padding-left: 50%;
+    margin-top: 80px;
+    padding-left: 35%;
   }
   
   .calendario {
     background-color: #000000;
     color: #ffffff;
-    padding: 15px 30px;
+    padding: 15px 40px;
     border: none;
     cursor: pointer;
     margin-bottom: 40px;  /* Move button up from bottom */
-    margin-right: 280px;  /* Move button further left */
+    margin-right: 250px;  /* Move button further left */
   }
 
 /* End of Costos tour */
@@ -400,8 +513,8 @@ li.logo img {
 /* Sabado tour */
 
 .tour-sabado h4 {
-    font-family: "Montaga", serif;
-    font-size: 65px;
+    font-family: 'Bodoni';
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0;
@@ -410,22 +523,30 @@ li.logo img {
     margin-left: 5px;  /* Margin from the left side */
     margin-right: 5px; 
     padding: 2px;
-  }
+    justify-content: center;
+}
 
-  .img-ceremonia {
-    background-repeat: no-repeat;
-    border-radius: 15px; /* Adjust the pixel value for more or less rounding */
-    overflow: hidden;  
-    float: left;
-    max-width: 50%;
-    max-height: 50%;
-    margin-right: 10px;
-    width: 600px;
-    height: 600px;
-  }
+.tour-sabado .img-ceremonia {
+    width: 100%; /* Make the container itself take 100% width */
+    
+}
+
+.tour-sabado .img-ceremonia img {
+    width: 100%;  /* Stretch image to fill container width */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+.tour-sabado h3 {
+    font-family: 'Calligraphy';
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+    align-items: center;
+    text-align: center;
+} 
 
   .tour-sabado p {
     margin-bottom: 10px; /* Add spacing between paragraphs */
+    align-items: center;
+    text-align: center;
 } 
 
 /* To clear the float and have the next sections below */
@@ -452,44 +573,179 @@ li.logo img {
 
 .img-ceremonia {
     margin-right: 50px;
+    border-radius: 15px; /* Adjust the pixel value for more or less rounding */
+
 }
 
-.gotera-eventos iframe {
-    margin-bottom: 20px; /* Add margin to the bottom */
-    margin-top: 20px;    /* Add margin to the top */
-    margin-left: 150px;
-    /* You can also add margin-left and margin-right */
+.ceremonia-religiosa h3 {
+    font-family: 'Poppins';
+    color: var(--c1--2--);
+    font-size: clamp(25px, 5vw, 35px);
+    line-height: clamp(30px, 5vw, 40px);
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    background-color: #928C6C; /* Example yellowish-brownish color */
+    border-radius: 5px;
+    padding: 10px 15px; /* Adjusted padding */
+    display: block; /* Change to block for center alignment */
+    margin-top: 10px; /* Reset margin-top to remove extra space */
+    position: relative;
+    top: -50px;
+}
+
+.ceremonia-religiosa h4 {
+    font-family: 'my-font';
+    text-align: start;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-bottom: -5px;
+}
+
+.ceremonia-religiosa h5 {
+    font-family: 'my-font';
+    text-align: end;
+    font-size: 30px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.ceremonia-religiosa p {
+    font-family: 'Poppins';
+    text-align: end;
+    text-align: start;
+    margin-left: 15px;
+}
+
+.ceremonia-religiosa b {
+    font-family: 'Bodoni 72 Book Bold';
+    font-size: 18px;
+}
+
+.gotera h3 {
+    font-family: 'Poppins';
+    color: var(--c1--2--);
+    font-size: clamp(25px, 5vw, 35px);
+    line-height: clamp(30px, 5vw, 40px);
+
+    text-align: center;
+    align-items: center; /* Use if you want vertical centering */
+    width: 60%; /* Adjust as needed */
+    margin: 0 auto 20px; /* Use margin: 0 auto for horizontal centering */
+
+    background-color: #928C6C; 
+    border-radius: 5px;
+    padding: 10px 15px; 
+    position: relative;
+    top: -40px;
+}
+
+.gotera h4 {
+    font-family: 'my-font';
+    text-align: center;
+    font-size: 40px;
+    margin-left: 25px;
 }
 
 .gotera p {
-    margin-right: 115px; /* Add margin to the top of each paragraph */
+    text-align: center;
+    font-family: 'Poppins';
+    margin-top: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.gotera-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin to the bottom */
+.ninos-text {
+    margin-bottom: 20px;
 }
 
-.gotera-eventos {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center;     /* Vertically center */
-    flex-direction: row;  /* Stack items vertically */
+.ninos-text p {
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0;
+    text-align: start;
+    margin-left: 10px;
+}
+
+.transporte-frame p {
+    font-family: 'Poppins';
+    margin-top: -65px;
+}
+
+.maps {
+    width: 100%;
+    max-width: 600px; /* Limit the iframe's maximum width */
+    height: 450px; 
+    display: flex;           /* Enable flexbox */
+    align-items: center;     /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 1px;
 }
 
 .gotera-img img {
-    object-fit: cover;
-    width: 100%;   /* Adjust the width as needed */
-    height: 550px;  /* Adjust the height as needed */
-    border-radius: 15px; /* Adjust the pixel value for more or less rounding */
-    background-repeat: no-repeat;
-    margin-right: 0;
-    float: left;
+    width: 100%;  /* Stretch image to fill container width */
+    height: auto;  /* Maintain aspect ratio */
 }
 
-.tour-sabado {
-    margin 0 autol
+.vestimenta {
+    margin-left: 10px;
 }
-  
+
+.codigo-vestimenta h4 {
+    font-family: 'Bodoni 72 Book';
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.codigo-vestimenta p {
+    font-family: 'Bodoni 72 Book';
+    text-align: start;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.hair-makeup {
+    text-align: center; /* Centers the h3 and p  */
+}
+
+.hair-makeups {
+    margin-bottom: 20px; /* Adds space below the text  */
+}
+
+.hair-makeup-susy, 
+.hair-makeup-gemelas {
+    display: inline-block; /* Allows the divs to sit side-by-side */
+    width: 48%;            /* Adjust as needed for desired width */
+    margin: 0 1%;          /* Adds a small gap between the divs */
+}
+
+/* Media Query for iPhone View */
+@media (max-width: 768px) { /* Adjust this breakpoint if needed */
+    .hair-makeup-susy,
+    .hair-makeup-gemelas {
+        display: block;     /* Stacks divs on top of each other */
+        width: auto;        /* Sets to full width of container */
+        margin: 0 auto 20px; /* Centers divs and adds spacing */
+    }
+}
+
+/* Styling the Instagram Buttons */
+.instagram-susy {
+    font-family: 'my-font';
+    display: inline-block;   /* Ensures buttons sit side-by-side */
+    padding: 10px 20px;     /* Adds padding for content margins */
+    border: 1px solid #ccc; /* Creates a 1px solid gray border */
+    border-radius: 5px;    /* Adds a slight rounded corner effect */
+    margin: 10px 0;         /* Adds 10px margin top and bottom */
+    text-decoration: none;  /* Removes underline from text */
+    color: #000;            /* Sets text color to black */
+}
+
+.instagram-susy:hover {  /* Style on hover effect */
+    background-color: #eee;  /* Adds a light gray background on hover */
+}

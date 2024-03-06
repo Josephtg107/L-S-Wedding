@@ -5,6 +5,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+@font-face {
+    font-family: 'my-font';
+    src: url('./Fonts/Calligraphy.woff2') format('woff2'),
+         url('./Fonts/Calligraphy.woff') format('woff'),
+         url('./Fonts/Calligraphy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni 72 Book'; /* Use the actual name of the font */
+    src: url('./Fonts/1574087879938-Bodoni-72-Book.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Bodoni 72 Book Bold'; /* Use the actual name of the font */
+    src: url('./Fonts/Bodoni/1574087879852-Bodoni-72-Bold.otf') format('opentype'); 
+    font-weight: bold; 
+    font-style: normal; 
+}
+
 
 *,*::after,*::before {
     box-sizing: border-box;
@@ -216,15 +239,21 @@ li.logo img {
     overflow: hidden;
 }
 
+.intro-regalos-div {
+    transform: translateY(-400px); /* Adjust the value as needed */
+
+}
+
 .intro-regalos h1 {
-    margin-left: 25%;
+    font-family: 'my-font';
+    margin-left: 15%;
     white-space: nowrap;
 }
 
 .intro-regalos h4 {
     font-size: bold;
-    font-family: 'Montaga', bold;
-    margin-left:25%;
+    font-family: 'Poppins';
+    margin-left:22%;
     text-align: center;
 }
 
@@ -233,9 +262,18 @@ li.logo img {
 
 /* Cuentas */
 
+.cuentas {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
 .cuentas-div h1 {
-    font-family: 'Montaga', serif;
-    font-size: 55px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 25px;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 15px;
@@ -244,10 +282,16 @@ li.logo img {
 
 .cuentas-bancos {
     display: flex; /* Use flexbox for easy side-by-side layout */
+    flex-direction: column;
     justify-content: space-around; /* Distribute items evenly with spacing */
     align-items: center; /* Vertically center items */
     margin: 20px auto; /* Add top/bottom margin, auto for left/right centering */
     width: 80%; /* Adjust width as needed for responsiveness */
+  }
+
+  .cuentas-bancos p {
+    font-family: 'Poppins';
+    margin: 10px;
   }
 
   .cuentas-bancos div { /* Target image containers */
@@ -263,24 +307,40 @@ li.logo img {
   }
 
   .cuentas-bancos .efectivo {
-    margin-bottom: 40px; /* Adjust the value as needed */
+    margin-bottom: 10px; /* Adjust the value as needed */
+  }
+
+  .cuentas-bancos .efectivo img {
+    margin-top: 50px; /* Adjust the value as needed */
   }
 
   .cuentas-bancos .cash-app {
-    margin-top: 120px; /* Adjust the value as needed */
+    margin-top: 50px; /* Adjust the value as needed */
+  }
+
+  .cuentas-bancos .cash-app a {
+    margin-top: 20px;
+    font-size: 20px;
+    color: blue; 
+    text-decoration: underline; 
+  }
+
+  .cuentas-bancos .cash-app img {
+    margin-bottom: 30px;
   }
   
 
   .cuentas-bancos .santander {
-    margin-top: 95px; /* Adjust the value as needed */
+    margin-top: 75px; /* Adjust the value as needed */
   }
 
   .cuentas-bancos .santander p {
-    margin-bottom: 15px; /* Increase this value for more spacing */
+    margin-bottom: 10px; /* Increase this value for more spacing */
   }
 
   .cuentas-bancos img.no-circle {
     border-radius: 0; /* Keep this to avoid the circle crop */
-    width: 150px;     /* Adjust width as desired */
-    height: auto;  
+    width: 180px;     /* Adjust width as desired */
+    height: 200px;  
+    margin-top: 25px;
   }

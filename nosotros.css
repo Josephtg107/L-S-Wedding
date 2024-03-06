@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: 'my-font';
+    src: url('./Fonts/Calligraphy.woff2') format('woff2'),
+         url('./Fonts/Calligraphy.woff') format('woff'),
+         url('./Fonts/Calligraphy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 *,*::after,*::before {
@@ -39,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    font-family: "Dancing Script", cursive;
+    font-family: 'my-font', serif;
     font-size: clamp(60px, 10vw, 100px);
     line-height: clamp(65px, 10vw, 105px);
     color: var(--c1--2--);
@@ -220,9 +228,10 @@ li.logo img {
 .intro-nosotros h1 { 
     color: var(--c1--1--);
     position: absolute;
-    bottom: 250px; /* Adjust the pixel value for desired distance */
     right: 20px; 
     margin: 20px; 
+    text-align: center;
+    margin-top: 150px;
   }
 
 .nosotros-imagen-linea-tiempo {
@@ -255,3 +264,27 @@ li.logo img {
 }
 
 /* End of Nosotros */
+
+section.galeria {
+    width: 100%;   /* Make the section take up full screen width */
+    text-align: center;  /* Center the h1 */
+}
+      
+section.galeria h1 {
+    margin-bottom: 20px;   /* Add space between the h1 and images */
+    font-family: 'my-font', serif;
+}
+      
+section.galeria .galeria-sari {
+    display: flex;         /* Make the image container a flexbox */
+    flex-wrap: wrap;      /* Allow images to wrap to the next line */ 
+    justify-content: space-around;  /* Distribute images with space around them */
+    }
+      
+    section.galeria .galeria-sari img {
+        flex: 0 0 30%;     /* Set a base width and prevent shrinking */
+        margin-bottom: 15px; /* Space between the images */
+        border: 2px solid white; /* Add a border */
+        max-width: 100%;     /* Key change: Prevent images from exceeding container width */
+        height: auto;        /* Maintain aspect ratio */
+      }
